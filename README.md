@@ -384,4 +384,29 @@ readonly: Solo lectura (no editable)
 
 value: Valor inicial del campo
 
+## APUNTES HTML
+
+### ¿Qué es HTML?
+
+HTML es el lenguaje estándar para crear páginas web y el responsable de mostrar contenido en el navegador.
+Define la estructura y el contenido de una página mediante etiquetas como <p>, <h1>, <body>, etc.
+
+HTML NO es un lenguaje de programación porque no tiene bucles, condiciones ni funciones. Su función es únicamente describir contenido, no darle estilo (CSS) ni comportamiento (JavaScript).
+
+Significado de las siglas HTML
+
+HyperText: texto que enlaza con otros recursos
+Markup: el contenido está organizado con etiquetas
+Language: tiene reglas y estructura propias
+
+Anatomía de un elemento HTML
+Un elemento HTML suele estar formado por:
+
+Etiqueta de apertura → <p>
+Contenido → Hola
+Etiqueta de cierre → </p>
+
+```
+<p>Hola</p>
+```
 
