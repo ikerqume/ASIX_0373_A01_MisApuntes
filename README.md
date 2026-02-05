@@ -387,18 +387,6 @@ value: Valor inicial del campo
 # Apuntes de HTML y CSS
 
 ## Tabla de Contenidos
-- [¿Qué es HTML?](#qué-es-html)
-- [Estructura básica de HTML](#estructura-básica-de-html)
-- [Elementos HTML](#elementos-html)
-- [Etiquetas básicas](#etiquetas-básicas-de-html)
-- [Rutas (Absoluta y Relativa)](#rutas-en-html)
-- [Imágenes](#imágenes)
-- [Enlaces](#enlaces)
-- [Contenedores (DIV)](#contenedores-div)
-- [Formularios](#formularios)
-- [Tablas](#tablas)
-
----
 
 ## ¿Qué es HTML?
 
@@ -406,7 +394,7 @@ value: Valor inicial del campo
 
 Define la estructura y el contenido de una página mediante etiquetas como `<p>`, `<h1>`, `<body>`, etc.
 
-> ⚠️ **Importante:** HTML **NO es un lenguaje de programación** porque no tiene bucles, condiciones ni funciones. Su función es únicamente describir contenido, no darle estilo (CSS) ni comportamiento (JavaScript).
+**Importante:** HTML **NO es un lenguaje de programación** porque no tiene bucles, condiciones ni funciones. Su función es únicamente describir contenido, no darle estilo (CSS) ni comportamiento (JavaScript).
 
 ### Significado de las siglas HTML
 
