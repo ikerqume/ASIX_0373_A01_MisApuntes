@@ -386,8 +386,6 @@ value: Valor inicial del campo
 
 # Apuntes de HTML y CSS
 
-## Tabla de Contenidos
-
 ## ¿Qué es HTML?
 
 **HTML** es el lenguaje estándar para crear páginas web y el responsable de mostrar contenido en el navegador.
