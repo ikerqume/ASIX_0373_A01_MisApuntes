@@ -810,10 +810,6 @@ Se utiliza para crear formularios que permiten al usuario enviar datos a un serv
 
 - **`action`:** Define la URL donde se enviarán los datos del formulario
 - **`method`:** Especifica el método de envío de datos (GET o POST)
-- **`enctype`:** Define cómo se codifican los datos antes de ser enviados (necesario para subir archivos)
-- **`target`:** Indica dónde se debe mostrar la respuesta al enviar el formulario
-  - `_self` (por defecto): La respuesta se carga en la misma ventana
-  - `_blank`: Abre la respuesta en una nueva pestaña o ventana
 
 ```html
 <form action="/procesar" method="POST">
@@ -887,11 +883,6 @@ Agrupa el pie de la tabla, generalmente utilizado para resumen o información ad
 
 #### `<tr>`
 Define una fila en la tabla.
-
-**Atributos:**
-- `align`: alinea el contenido
-- `bgcolor`: define el color de fondo de la fila
-- `valign`: alineación vertical
 
 #### `<th>`
 Define una celda de encabezado en una tabla.
