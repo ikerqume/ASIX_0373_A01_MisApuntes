@@ -860,5 +860,243 @@ Define una celda de datos dentro de una fila.
   </tfoot>
 </table>
 ```
+# CSS
+
+## ¿Qué es CSS?
+
+Da estilo a HTML: colores, tamaños, posiciones.
+- HTML = estructura
+- CSS = diseño
+
+---
+
+## Dónde poner CSS
+
+**1. Inline (en la etiqueta):**
+```html
+Texto rojo
+```
+
+**2. Interno (en el head):**
+```html
+
+  
+    p { color: red; }
+  
+
+```
+
+**3. Externo (archivo .css):**
+```html
+
+```
+
+---
+
+## Sintaxis
+
+```css
+selector {
+  propiedad: valor;
+}
+```
+
+**Ejemplo:**
+```css
+p {
+  font-size: 16px;
+  color: blue;
+}
+```
+
+**Comentarios:**
+```css
+/* Esto es un comentario */
+```
+
+**Agrupar selectores:**
+```css
+h1, h2, p {
+  color: red;
+}
+```
+
+---
+
+## Selectores básicos
+
+```css
+/* Elemento */
+p { color: red; }
+
+/* Clase */
+.mi-clase { color: blue; }
+
+/* ID */
+#mi-id { color: green; }
+```
+
+```html
+Rojo
+Azul
+Verde
+```
+
+---
+
+## Selectores avanzados
+
+```css
+/* Universal */
+* { margin: 0; }
+
+/* Atributo */
+img[alt] { border: 1px solid black; }
+
+/* Hijo directo */
+div > p { color: red; }
+
+/* Descendiente */
+div p { color: blue; }
+
+/* Hermano adyacente */
+h1 + p { margin-top: 0; }
+
+/* Pseudoclases */
+a:hover { color: red; }
+a:visited { color: purple; }
+
+/* Pseudoelementos */
+p::first-line { font-weight: bold; }
+```
+
+---
+
+## Modelo de caja
+
+Todo elemento es una caja con:
+- **Content** (contenido)
+- **Padding** (relleno interno)
+- **Border** (borde)
+- **Margin** (margen externo)
+
+### Margin
+
+```css
+margin: 10px; /* todos los lados */
+margin: 10px 20px; /* vertical horizontal */
+margin: 10px 20px 30px 40px; /* arriba derecha abajo izquierda */
+```
+
+Valores: `px`, `em`, `rem`, `%`, `auto`
+
+### Border
+
+```css
+border: 1px solid black;
+border-top: 2px dashed red;
+```
+
+Estilos: `solid`, `dashed`, `dotted`, `double`, `none`
+
+### Padding
+
+```css
+padding: 10px;
+padding-left: 20px;
+```
+
+No puede ser negativo. Es transparente.
+
+---
+
+## Display
+
+```css
+/* Bloque - ocupa todo el ancho */
+display: block;
+
+/* Flex - layout flexible */
+display: flex;
+```
+---
+
+## Flexbox
+
+Contenedor flexible para organizar elementos:
+
+```css
+.contenedor {
+  display: flex;
+  flex-direction: row; /* o column */
+  justify-content: center; /* alineación horizontal */
+  align-items: center; /* alineación vertical */
+  flex-wrap: wrap; /* permite salto de línea */
+}
+```
+
+---
+
+## Diseño Responsive
+
+Técnica para que tu web se vea bien en móviles, tabletas y ordenadores.
+
+### ¿Qué es?
+
+El diseño se adapta automáticamente al tamaño de pantalla del dispositivo.
+
+**Características principales:**
+- **Flexible y adaptable** - Todo se ajusta al tamaño
+- **Media queries** - Estilos según el dispositivo
+- **Imágenes escalables** - Se ajustan sin deformarse
+
+### Media Queries
+
+Aplican estilos según el tamaño de pantalla:
+
+```css
+/* Por defecto (pantallas grandes - escritorio) */
+body {
+  background-color: blue;
+  font-size: 16px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tabletas (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    background-color: green;
+    font-size: 14px;
+  }
+  
+  .container {
+    width: 90%;
+  }
+}
+
+/* Móviles (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    background-color: yellow;
+    font-size: 12px;
+  }
+  
+  .container {
+    width: 100%;
+  }
+}
+```
+
+### Tamaños comunes
+
+- **992px - 1199px** → Escritorio normal
+- **768px - 991px** → Tabletas
+- **576px - 767px** → Móviles grandes
+- **< 576px** → Móviles pequeños
+
 
 
