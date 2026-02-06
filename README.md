@@ -392,8 +392,6 @@ value: Valor inicial del campo
 
 Define la estructura y el contenido de una página mediante etiquetas como `<p>`, `<h1>`, `<body>`, etc.
 
-**Importante:** HTML **NO es un lenguaje de programación** porque no tiene bucles, condiciones ni funciones. Su función es únicamente describir contenido, no darle estilo (CSS) ni comportamiento (JavaScript).
-
 ### Significado de las siglas HTML
 
 - **HyperText:** texto que enlaza con otros recursos
@@ -415,9 +413,6 @@ Un elemento HTML suele estar formado por:
 ### Atributos
 
 Las etiquetas pueden tener **atributos**, que añaden información extra (como `class`, `id`, `src`, `alt`, etc.).
-
-- Los atributos siempre van en la **etiqueta de apertura**
-- Tienen la forma: `nombre="valor"`
 
 ```html
 <img src="imagen.jpg" alt="Descripción de la imagen">
@@ -460,13 +455,7 @@ Una página HTML básica incluye:
 - Se conoce como el **elemento raíz**
 
 #### `<head>`
-Guarda información que no es visible en la página, como:
-
-- **`<meta>`:** contiene información del documento (como el juego de caracteres `utf-8`, descripciones, palabras clave, etc.)
-- **`<title>`:** título que aparece en la pestaña del navegador y en buscadores (importante para SEO)
-- **`<link rel="icon">`:** agrega el favicon de la página
-- Enlaces a CSS, JavaScript, u otros archivos externos
-- Estilos CSS escritos dentro de `<style>`
+Guarda información que no es visible en la página
 
 #### `<body>`
 Contiene el contenido principal de la página web que será visible para el usuario.
@@ -475,7 +464,7 @@ Contiene el contenido principal de la página web que será visible para el usua
 
 ## Elementos HTML
 
-### Elementos de bloque (block elements)
+### Elementos de bloque 
 
 Ocupan todo el ancho disponible y separan el contenido en bloques.
 
@@ -483,12 +472,9 @@ Ocupan todo el ancho disponible y separan el contenido en bloques.
 - `<h1>` – `<h6>`
 - `<p>`
 - `<br>`
-- `<hr>`
-- `<blockquote>`
-- `<pre>`
 - `<div>`
 
-### Elementos de línea (inline elements)
+### Elementos de línea
 
 Se muestran dentro de una línea y no generan saltos.
 
@@ -497,10 +483,6 @@ Se muestran dentro de una línea y no generan saltos.
 - `<strong>`
 - `<q>`
 - `<span>`
-- `<cite>`
-- `<abbr>`
-- `<code>`
-
 ---
 
 ## Normas básicas de etiquetas HTML
@@ -530,15 +512,6 @@ En un documento HTML podemos poner anotaciones que no se verán reflejadas cuand
 ```html
 <!-- Este es un comentario -->
 ```
-
-### Indentación (sangría del código)
-
-Usar una indentación consistente mejora la legibilidad del código.
-
-### Organización en carpetas y archivos
-
-Mantener una estructura ordenada de directorios facilita el mantenimiento del proyecto.
-
 ---
 
 ## Etiquetas básicas de HTML
@@ -569,14 +542,6 @@ Permite agregar un salto de línea entre párrafos.
 <p>Primera línea<br>Segunda línea</p>
 ```
 
-### Separador de línea (`<hr>`)
-
-Permite agregar una línea horizontal divisoria. Útil para separar visualmente párrafos.
-
-```html
-<hr>
-```
-
 ### Énfasis (`<em>`, `<strong>`)
 
 Cuando queremos dar énfasis a una parte de texto para destacar su importancia.
@@ -603,12 +568,6 @@ A diferencia de `<div>`, que es un bloque, `<span>` no crea una nueva línea.
 
 Aquellas en las que el orden de los ítems no es relevante, como en una lista de compras.
 
-Se puede escoger el símbolo tipográfico:
-
-- `<ul type="disc">` → ●
-- `<ul type="square">` → ■
-- `<ul type="circle">` → ○
-
 ```html
 <ul>
   <li>Elemento 1</li>
@@ -621,31 +580,11 @@ Se puede escoger el símbolo tipográfico:
 
 Aquellas en las que el orden sí es relevante, como en una receta.
 
-Se puede escoger el tipo de numeración:
-
-- `<ol type="A">` → A, B, C...
-- `<ol type="a">` → a, b, c...
-- `<ol type="I">` → I, II, III...
-- `<ol type="i">` → i, ii, iii...
-- `<ol type="1">` → 1, 2, 3... (por defecto)
-
 ```html
 <ol>
   <li>Primer paso</li>
   <li>Segundo paso</li>
   <li>Tercer paso</li>
-</ol>
-```
-
-#### Atributos adicionales
-
-- **`start="n"`:** fuerza la numeración a partir de un determinado valor
-- **`value="n"`:** fuerza a que el elemento tenga el número de orden que indiquemos
-
-```html
-<ol type="i" start="10">
-  <li>Elemento con numeración x</li>
-  <li>Elemento con numeración xi</li>
 </ol>
 ```
 
@@ -731,17 +670,17 @@ Si el enlace está dirigido a un documento local, podemos usar la ruta relativa:
 </div>
 ```
 
-### Enlaces a etiquetas dentro del propio código HTML (Anclas)
+### Enlaces a etiquetas dentro del propio código HTML 
 
 Para navegar dentro de la misma página, creamos **anclas** usando el atributo `id`.
 
-#### Crear el ancla
+#### Crear el ID
 
 ```html
 <h2 id="seccion1">Sección 1</h2>
 ```
 
-#### Enlazar al ancla
+#### Enlazar al ID 
 
 Los enlaces a anclas usan el valor del atributo `id` precedido del carácter `#`:
 
@@ -749,7 +688,7 @@ Los enlaces a anclas usan el valor del atributo `id` precedido del carácter `#`
 <a href="#seccion1" title="Sección 1">Ir a la sección 1</a>
 ```
 
-#### Enlazar a un ancla desde otro documento
+#### Enlazar a un ID desde otro documento
 
 ```html
 <a href="secciones.html#seccion1" title="Sección 1">Ir a la sección 1</a>
@@ -770,10 +709,7 @@ Es como un bloque donde puedes poner texto, imágenes, formularios, o cualquier 
 
 2. **Aplicar estilos:**
    - Darle un aspecto diferente a cada sección usando CSS
-
-3. **Manipular con JavaScript:**
-   - Trabajar con partes específicas del contenido
-
+     
 ```html
 <div class="contenedor">
   <h2>Título de la sección</h2>
@@ -829,23 +765,9 @@ Se utiliza para crear diversos tipos de campos interactivos en un formulario.
 - **`value`:** Valor predeterminado del campo
 - **`placeholder`:** Texto que aparece cuando el campo está vacío
 - **`required`:** Indica que el campo debe completarse antes de enviar el formulario
-- **`disabled`:** Desactiva el campo
-- **`readonly`:** Hace que el campo sea solo de lectura
 
 ```html
 <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-```
-
-### Input type="radio"
-
-Botón de opción, se agrupa con otros del mismo nombre (solo se puede seleccionar uno).
-
-```html
-<input type="radio" id="opcion1" name="opciones" value="opcion1">
-<label for="opcion1">Opción 1</label>
-
-<input type="radio" id="opcion2" name="opciones" value="opcion2">
-<label for="opcion2">Opción 2</label>
 ```
 
 ### Input type="checkbox"
@@ -899,8 +821,6 @@ Define una celda de datos dentro de una fila.
 - `rowspan`: abarca varias filas
 - `align`: alinea el contenido dentro de la celda
 
-#### `<caption>`
-Proporciona un título o descripción para la tabla. Se coloca justo después de la etiqueta `<table>`.
 
 **Atributos:**
 - `align`: alinea el título respecto a la tabla
